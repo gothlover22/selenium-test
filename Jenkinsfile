@@ -5,14 +5,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing npm dependencies...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
                 echo 'Running Selenium test for JS addition...'
-                sh 'npx mocha src/math.test.js'
+                bat 'npx mocha src\\math.test.js'
             }
         }
     }
